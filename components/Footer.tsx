@@ -14,14 +14,11 @@ const footerLinks = {
   company: [
     { name: 'About Us', href: '/about' },
     { name: 'Case Studies', href: '/case-studies' },
-    { name: 'Blog', href: '/blog' },
     { name: 'Careers', href: '/careers' },
   ],
   resources: [
-    { name: 'Documentation', href: '/docs' },
-    { name: 'API Reference', href: '/api' },
+    { name: 'Blog', href: '/blog' },
     { name: 'Support Center', href: '/support' },
-    { name: 'Status Page', href: '/status' },
   ],
   legal: [
     { name: 'Privacy Policy', href: '/privacy' },

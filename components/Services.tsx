@@ -14,7 +14,7 @@ const services = [
     description: 'Enterprise API-led connectivity solutions that seamlessly connect your systems and applications.',
     price: 'From $25,000',
     duration: '8-16 weeks',
-    popular: true,
+    popular: false,
     color: 'from-blue-500 to-purple-600',
     features: ['API-led connectivity', 'Real-time sync', 'Enterprise security'],
   },
@@ -34,7 +34,7 @@ const services = [
     description: 'Intelligent automation agents that streamline workflows and eliminate repetitive tasks.',
     price: 'From $15,000',
     duration: '6-12 weeks',
-    popular: false,
+    popular: true,
     color: 'from-green-500 to-blue-600',
     features: ['Workflow automation', 'Document processing', '24/7 operation'],
   },
@@ -82,83 +82,87 @@ export default function Services() {
           </p>
         </div>
 
-        {/* Enhanced Services Grid */}
+        {/* Enhanced Services Grid with proper spacing for badges */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
           {services.map((service, index) => (
-            <Card 
+            <div 
               key={index}
-              className={`service-card group cursor-pointer relative overflow-hidden ${
-                service.popular ? 'ring-2 ring-primary shadow-2xl' : ''
-              }`}
+              className={`relative ${service.popular ? 'pt-4' : ''}`}
               onMouseEnter={() => setHoveredCard(index)}
               onMouseLeave={() => setHoveredCard(null)}
             >
-              {/* Popular Badge */}
+              {/* Popular Badge - positioned outside the card */}
               {service.popular && (
-                <div className="absolute -top-3 -right-3 z-10">
-                  <Badge className="bg-gradient-to-r from-primary to-accent text-white shadow-lg animate-pulse-glow">
+                <div className="absolute -top-2 left-1/2 transform -translate-x-1/2 z-20">
+                  <Badge className="bg-gradient-to-r from-primary to-accent text-white shadow-lg animate-pulse-glow px-4 py-1">
                     <Star className="h-3 w-3 mr-1" />
                     Most Popular
                   </Badge>
                 </div>
               )}
 
-              {/* Gradient Overlay */}
-              <div className={`absolute inset-0 bg-gradient-to-br ${service.color} opacity-0 group-hover:opacity-5 transition-opacity duration-500`} />
-              
-              {/* Shimmer Effect */}
-              <div className="card-hover-effect absolute inset-0" />
-              
-              <CardHeader className="text-center space-y-6 pb-4 relative z-10">
-                {/* Enhanced Icon */}
-                <div className={`w-20 h-20 mx-auto bg-gradient-to-br ${service.color} rounded-2xl flex items-center justify-center group-hover:scale-110 group-hover:rotate-6 transition-all duration-500 shadow-lg`}>
-                  <service.icon className="h-10 w-10 text-white" />
-                </div>
+              <Card 
+                className={`service-card group cursor-pointer relative overflow-hidden h-full ${
+                  service.popular ? 'ring-2 ring-primary shadow-2xl' : ''
+                }`}
+              >
+                {/* Gradient Overlay */}
+                <div className={`absolute inset-0 bg-gradient-to-br ${service.color} opacity-0 group-hover:opacity-5 transition-opacity duration-500`} />
                 
-                <div>
-                  <CardTitle className="text-xl mb-3 group-hover:text-primary transition-colors duration-300">
-                    {service.title}
-                  </CardTitle>
-                  <CardDescription className="text-base leading-relaxed text-gray-600 group-hover:text-gray-700 transition-colors duration-300">
-                    {service.description}
-                  </CardDescription>
-                </div>
+                {/* Shimmer Effect */}
+                <div className="card-hover-effect absolute inset-0" />
+                
+                <CardHeader className="text-center space-y-6 pb-4 relative z-10">
+                  {/* Enhanced Icon */}
+                  <div className={`w-20 h-20 mx-auto bg-gradient-to-br ${service.color} rounded-2xl flex items-center justify-center group-hover:scale-110 group-hover:rotate-6 transition-all duration-500 shadow-lg`}>
+                    <service.icon className="h-10 w-10 text-white" />
+                  </div>
+                  
+                  <div>
+                    <CardTitle className="text-xl mb-3 group-hover:text-primary transition-colors duration-300">
+                      {service.title}
+                    </CardTitle>
+                    <CardDescription className="text-base leading-relaxed text-gray-600 group-hover:text-gray-700 transition-colors duration-300">
+                      {service.description}
+                    </CardDescription>
+                  </div>
 
-                {/* Features List */}
-                <div className="space-y-2">
-                  {service.features.map((feature, idx) => (
-                    <div key={idx} className="flex items-center justify-center space-x-2 text-sm text-gray-500">
-                      <div className="w-1.5 h-1.5 bg-primary rounded-full" />
-                      <span>{feature}</span>
-                    </div>
-                  ))}
-                </div>
-              </CardHeader>
-              
-              <CardContent className="text-center space-y-6 relative z-10">
-                {/* Enhanced Pricing */}
-                <div className="space-y-2">
-                  <div className={`text-2xl font-bold bg-gradient-to-r ${service.color} bg-clip-text text-transparent`}>
-                    {service.price}
+                  {/* Features List */}
+                  <div className="space-y-2">
+                    {service.features.map((feature, idx) => (
+                      <div key={idx} className="flex items-center justify-center space-x-2 text-sm text-gray-500">
+                        <div className="w-1.5 h-1.5 bg-primary rounded-full" />
+                        <span>{feature}</span>
+                      </div>
+                    ))}
                   </div>
-                  <div className="text-sm text-gray-500 flex items-center justify-center space-x-2">
-                    <div className="w-1 h-1 bg-gray-400 rounded-full" />
-                    <span>{service.duration}</span>
-                  </div>
-                </div>
+                </CardHeader>
                 
-                {/* Enhanced Button */}
-                <Button 
-                  asChild 
-                  className={`w-full group/btn interactive-button bg-gradient-to-r ${service.color} hover:shadow-xl border-0 text-white`}
-                >
-                  <Link href={`/services/${service.title.toLowerCase().replace(/\s+/g, '-')}`}>
-                    Learn More
-                    <ArrowRight className="ml-2 h-4 w-4 group-hover/btn:translate-x-2 transition-transform duration-300" />
-                  </Link>
-                </Button>
-              </CardContent>
-            </Card>
+                <CardContent className="text-center space-y-6 relative z-10">
+                  {/* Enhanced Pricing */}
+                  <div className="space-y-2">
+                    <div className={`text-2xl font-bold bg-gradient-to-r ${service.color} bg-clip-text text-transparent`}>
+                      {service.price}
+                    </div>
+                    <div className="text-sm text-gray-500 flex items-center justify-center space-x-2">
+                      <div className="w-1 h-1 bg-gray-400 rounded-full" />
+                      <span>{service.duration}</span>
+                    </div>
+                  </div>
+                  
+                  {/* Enhanced Button */}
+                  <Button 
+                    asChild 
+                    className={`w-full group/btn interactive-button bg-gradient-to-r ${service.color} hover:shadow-xl border-0 text-white`}
+                  >
+                    <Link href={`/services/${service.title.toLowerCase().replace(/\s+/g, '-')}`}>
+                      Learn More
+                      <ArrowRight className="ml-2 h-4 w-4 group-hover/btn:translate-x-2 transition-transform duration-300" />
+                    </Link>
+                  </Button>
+                </CardContent>
+              </Card>
+            </div>
           ))}
         </div>
 

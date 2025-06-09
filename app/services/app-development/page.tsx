@@ -68,7 +68,7 @@ export default function AppDevelopment() {
                     <ArrowRight className="ml-2 h-4 w-4" />
                   </Link>
                 </Button>
-                <Button asChild variant="outline" size="lg" className="border-white text-white hover:bg-white/10">
+                <Button asChild variant="outline" size="lg" className="border-white text-primary hover:bg-white/10">
                   <Link href="/case-studies">
                     View Apps
                   </Link>
