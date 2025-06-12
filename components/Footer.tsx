@@ -75,7 +75,7 @@ export default function Footer() {
               <div className="p-2 rounded-lg bg-primary/10">
                 <Brain className="h-6 w-6 text-primary" />
               </div>
-              <span className="text-xl font-bold">The Nexus Tech</span>
+              <span className="text-xl font-bold">Karozen</span>
             </div>
             <p className="text-gray-400 leading-relaxed">
               Transforming businesses with MuleSoft integrations, AI-first solutions, and intelligent automation. 
@@ -86,15 +86,15 @@ export default function Footer() {
             <div className="space-y-3">
               <div className="flex items-center space-x-3 text-gray-400">
                 <Mail className="h-4 w-4" />
-                <span>hello@nexustech.com</span>
+                <span>info.karozen@gmail.com</span>
               </div>
               <div className="flex items-center space-x-3 text-gray-400">
                 <Phone className="h-4 w-4" />
-                <span>+1 (555) 123-4567</span>
+                <span>+91-8591034367</span>
               </div>
               <div className="flex items-center space-x-3 text-gray-400">
                 <MapPin className="h-4 w-4" />
-                <span>San Francisco, CA</span>
+                <span>Remote</span>
               </div>
             </div>
 
@@ -187,7 +187,7 @@ export default function Footer() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-6">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             <p className="text-gray-400 text-sm">
-              © {new Date().getFullYear()} The Nexus Tech. All rights reserved.
+              © {new Date().getFullYear()} Karozen. All rights reserved.
             </p>
             <div className="flex items-center space-x-6 text-sm text-gray-400">
               <span>🚀 Powered by AI</span>

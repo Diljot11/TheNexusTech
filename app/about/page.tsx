@@ -59,7 +59,7 @@ export default function About() {
             <div className="text-center space-y-6">
               <div className="inline-flex items-center space-x-2 bg-white/20 backdrop-blur-sm rounded-full px-6 py-3 text-white border border-white/30 badge-glow">
                 <Sparkles className="h-4 w-4 animate-bounce-subtle" />
-                <span className="font-medium">About The Nexus Tech</span>
+                <span className="font-medium">About Karozen</span>
               </div>
               <h1 className="text-4xl md:text-5xl font-bold text-white text-shadow">
                 Transforming Businesses with
@@ -116,7 +116,7 @@ export default function About() {
                 <CardContent className="p-8 md:p-12 relative z-10">
                   <div className="space-y-6 text-lg text-gray-700 leading-relaxed">
                     <p className="group-hover:text-gray-800 transition-colors duration-300">
-                      The Nexus Tech was founded on the belief that technology should be an enabler, not a barrier. 
+                      Karozen was founded on the belief that technology should be an enabler, not a barrier. 
                       We started our journey with a simple mission: to help businesses harness the power of modern 
                       technology to achieve their goals faster and more efficiently.
                     </p>

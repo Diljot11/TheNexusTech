@@ -59,10 +59,10 @@ export default function Terms() {
                 </CardHeader>
                 <CardContent className="relative z-10 space-y-4">
                   <p className="text-gray-600">
-                    By accessing and using The Nexus Tech's website and services, you accept and agree to be bound by the terms and provision of this agreement. If you do not agree to abide by the above, please do not use this service.
+                    By accessing and using Karozen's website and services, you accept and agree to be bound by the terms and provision of this agreement. If you do not agree to abide by the above, please do not use this service.
                   </p>
                   <p className="text-gray-600">
-                    These Terms of Service ("Terms") govern your use of our website located at nexustech.com (the "Service") operated by The Nexus Tech ("us", "we", or "our").
+                    These Terms of Service ("Terms") govern your use of our website located at karozen.com (the "Service") operated by Karozen ("us", "we", or "our").
                   </p>
                 </CardContent>
               </Card>
@@ -77,7 +77,7 @@ export default function Terms() {
                   </CardTitle>
                 </CardHeader>
                 <CardContent className="relative z-10 space-y-4">
-                  <p className="text-gray-600 mb-4">Permission is granted to temporarily download one copy of the materials on The Nexus Tech's website for personal, non-commercial transitory viewing only. This is the grant of a license, not a transfer of title, and under this license you may not:</p>
+                  <p className="text-gray-600 mb-4">Permission is granted to temporarily download one copy of the materials on Karozen's website for personal, non-commercial transitory viewing only. This is the grant of a license, not a transfer of title, and under this license you may not:</p>
                   <ul className="space-y-2 text-gray-600">
                     <li className="flex items-start space-x-2">
                       <div className="w-1.5 h-1.5 bg-red-500 rounded-full mt-2 flex-shrink-0" />
@@ -149,7 +149,7 @@ export default function Terms() {
                 </CardHeader>
                 <CardContent className="relative z-10 space-y-4">
                   <p className="text-gray-600">
-                    The Service and its original content, features, and functionality are and will remain the exclusive property of The Nexus Tech and its licensors. The Service is protected by copyright, trademark, and other laws. Our trademarks and trade dress may not be used in connection with any product or service without our prior written consent.
+                    The Service and its original content, features, and functionality are and will remain the exclusive property of Karozen and its licensors. The Service is protected by copyright, trademark, and other laws. Our trademarks and trade dress may not be used in connection with any product or service without our prior written consent.
                   </p>
                   <p className="text-gray-600">
                     You retain ownership of any intellectual property rights that you hold in content that you submit to us. However, by submitting content, you grant us a worldwide, non-exclusive, royalty-free license to use, reproduce, modify, and distribute such content in connection with our services.
@@ -168,7 +168,7 @@ export default function Terms() {
                 </CardHeader>
                 <CardContent className="relative z-10 space-y-4">
                   <p className="text-gray-600">
-                    In no event shall The Nexus Tech, nor its directors, employees, partners, agents, suppliers, or affiliates, be liable for any indirect, incidental, special, consequential, or punitive damages, including without limitation, loss of profits, data, use, goodwill, or other intangible losses, resulting from your use of the Service.
+                    In no event shall Karozen, nor its directors, employees, partners, agents, suppliers, or affiliates, be liable for any indirect, incidental, special, consequential, or punitive damages, including without limitation, loss of profits, data, use, goodwill, or other intangible losses, resulting from your use of the Service.
                   </p>
                   <p className="text-gray-600">
                     Our total liability to you for any damages arising out of or related to these Terms or the Service shall not exceed the amount you have paid us in the twelve (12) months preceding the claim.
@@ -219,9 +219,8 @@ export default function Terms() {
                     If you have any questions about these Terms of Service, please contact us at:
                   </p>
                   <div className="space-y-2 text-gray-600">
-                    <p>Email: legal@nexustech.com</p>
-                    <p>Phone: +1 (555) 123-4567</p>
-                    <p>Address: 123 Tech Street, San Francisco, CA 94105</p>
+                    <p>Email: info.karozen@gmail.com</p>
+                    <p>Address: Remote</p>
                   </div>
                 </CardContent>
               </Card>
