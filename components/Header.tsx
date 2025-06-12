@@ -124,7 +124,7 @@ export default function Header() {
               "text-xl font-bold transition-colors",
               getTextColor()
             )}>
-              The Nexus Tech
+              Karozen
             </span>
           </Link>
 

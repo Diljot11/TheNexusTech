@@ -3,51 +3,64 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
-import { ArrowRight, MapPin, Clock, DollarSign, Users, Heart, Zap, Trophy, Coffee, Laptop } from 'lucide-react';
+import { ArrowRight, MapPin, Clock, DollarSign, Users, Heart, Zap, Trophy, Coffee, Laptop, GraduationCap } from 'lucide-react';
 import Link from 'next/link';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 
 const jobOpenings = [
   {
-    title: 'Senior MuleSoft Developer',
+    title: 'Quant Developer',
     department: 'Engineering',
-    location: 'San Francisco, CA / Remote',
+    location: 'Remote',
     type: 'Full-time',
-    salary: '$120,000 - $160,000',
-    description: 'Lead MuleSoft integration projects and mentor junior developers in API-led connectivity solutions.',
-    requirements: ['5+ years MuleSoft experience', 'Anypoint Platform certification', 'API design expertise'],
+    salary: 'Competitive Package',
+    description: 'Seasoned Python/Cython developer with expertise in quantitative methodologies for financial modeling and analysis.',
+    requirements: ['Expert Python/Cython skills', 'Quantitative finance experience', 'Mathematical modeling expertise', 'Financial markets knowledge'],
     color: 'from-blue-500 to-purple-600',
   },
   {
-    title: 'AI Solutions Architect',
-    department: 'AI/ML',
+    title: 'Python Developer',
+    department: 'Engineering',
     location: 'Remote',
     type: 'Full-time',
-    salary: '$140,000 - $180,000',
-    description: 'Design and implement AI-first business solutions for enterprise clients.',
-    requirements: ['Machine Learning expertise', 'Python/TensorFlow', 'Cloud platforms (AWS/Azure)'],
+    salary: 'Competitive Package',
+    description: 'Experienced Python developer capable of solution design and team leadership responsibilities.',
+    requirements: ['Advanced Python development', 'Solution architecture skills', 'Team leadership experience', 'System design expertise'],
+    color: 'from-green-500 to-teal-600',
+  },
+];
+
+const traineeOpenings = [
+  {
+    title: 'AI Agents/Automation Development Trainee',
+    department: 'Engineering',
+    location: 'Remote',
+    type: 'Full-time Trainee Program',
+    salary: 'Investment Rs 2000/$20 (8-week program)',
+    description: 'Learn about various Agentic frameworks and automation tools while working on real projects.',
+    requirements: ['Interest in AI/automation', 'Basic programming knowledge', 'Willingness to learn', 'Strong problem-solving skills'],
     color: 'from-purple-500 to-pink-600',
   },
   {
-    title: 'Automation Engineer',
-    department: 'Engineering',
-    location: 'San Francisco, CA',
-    type: 'Full-time',
-    salary: '$100,000 - $130,000',
-    description: 'Build intelligent automation agents and workflow solutions for clients.',
-    requirements: ['RPA experience', 'Process automation', 'Python/JavaScript'],
-    color: 'from-green-500 to-teal-600',
-  },
-  {
-    title: 'Frontend Developer',
+    title: 'Software Development Trainee',
     department: 'Engineering',
     location: 'Remote',
-    type: 'Full-time',
-    salary: '$90,000 - $120,000',
-    description: 'Create beautiful, responsive web applications using modern frameworks.',
-    requirements: ['React/Next.js', 'TypeScript', 'Tailwind CSS'],
+    type: 'Full-time Trainee Program',
+    salary: 'Investment Rs 2000/$20 (8-week program)',
+    description: 'Work on fullstack development projects and learn how to utilize AI tools in the development process.',
+    requirements: ['Fullstack development basics', 'Interest in AI tools', 'Web development knowledge', 'Collaborative mindset'],
     color: 'from-orange-500 to-red-600',
+  },
+  {
+    title: 'Python Development Trainee',
+    department: 'Engineering',
+    location: 'Remote',
+    type: 'Full-time Trainee Program',
+    salary: 'Investment Rs 2000/$20 (8-week program)',
+    description: 'Work on a project that can become a product for the company, gaining hands-on Python development experience.',
+    requirements: ['Python programming skills', 'Product development interest', 'Self-motivated learner', 'Project management basics'],
+    color: 'from-teal-500 to-green-600',
   },
 ];
 
@@ -105,7 +118,7 @@ export default function Careers() {
               </h1>
               <p className="text-xl text-white/95 max-w-3xl mx-auto text-shadow">
                 Join a team of passionate technologists who are transforming businesses with 
-                MuleSoft integrations, AI solutions, and intelligent automation.
+                cutting-edge solutions. All positions are remote-only.
               </p>
             </div>
           </div>
@@ -142,17 +155,21 @@ export default function Careers() {
           </div>
         </section>
 
-        {/* Job Openings */}
+        {/* Full-time Job Openings */}
         <section className="py-16 bg-gradient-to-br from-gray-50 to-white">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <div className="max-w-6xl mx-auto">
               <div className="text-center mb-12">
                 <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                  Current Openings
+                  Full-Time Positions
                 </h2>
                 <p className="text-xl text-gray-600">
                   Join our growing team and make an impact from day one
                 </p>
+                <div className="inline-flex items-center space-x-2 bg-primary/10 rounded-full px-6 py-2 text-primary mt-4">
+                  <Laptop className="h-4 w-4" />
+                  <span className="font-medium">All positions are remote-only</span>
+                </div>
               </div>
 
               <div className="space-y-6">
@@ -210,9 +227,103 @@ export default function Careers() {
                           </ul>
                         </div>
                         
-                        <Button className={`bg-gradient-to-r ${job.color} hover:shadow-xl text-white border-0 interactive-button`}>
-                          Apply Now
-                          <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform duration-300" />
+                        <Button asChild className={`bg-gradient-to-r ${job.color} hover:shadow-xl text-white border-0 interactive-button`}>
+                          <Link href="/apply">
+                            Apply Now
+                            <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform duration-300" />
+                          </Link>
+                        </Button>
+                      </div>
+                    </CardContent>
+                  </Card>
+                ))}
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Trainee Programs */}
+        <section className="py-16 bg-white">
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="max-w-6xl mx-auto">
+              <div className="text-center mb-12">
+                <div className="inline-flex items-center space-x-2 bg-gradient-to-r from-primary/10 to-accent/10 rounded-full px-6 py-2 mb-4">
+                  <GraduationCap className="h-4 w-4 text-primary" />
+                  <span className="font-medium text-gray-700">Professional Development</span>
+                </div>
+                <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                  Trainee Programs
+                </h2>
+                <p className="text-xl text-gray-600">
+                  Launch your career with hands-on experience in cutting-edge technology
+                </p>
+                <div className="inline-flex items-center space-x-2 bg-green-100 rounded-full px-6 py-2 text-green-700 mt-4">
+                  <Laptop className="h-4 w-4" />
+                  <span className="font-medium">Remote-only • 8-week program • Performance-based full-time opportunities</span>
+                </div>
+              </div>
+
+              <div className="space-y-6">
+                {traineeOpenings.map((trainee, index) => (
+                  <Card 
+                    key={index}
+                    className="service-card group cursor-pointer border-2 border-dashed border-primary/20 hover:border-primary/40"
+                    style={{ animationDelay: `${index * 0.1}s` }}
+                  >
+                    <div className="card-hover-effect absolute inset-0" />
+                    <CardHeader className="relative z-10">
+                      <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between space-y-4 lg:space-y-0">
+                        <div className="space-y-2">
+                          <div className="flex items-center space-x-3">
+                            <CardTitle className="text-2xl group-hover:text-primary transition-colors duration-300">
+                              {trainee.title}
+                            </CardTitle>
+                            <Badge variant="outline" className="border-primary text-primary">
+                              <GraduationCap className="h-3 w-3 mr-1" />
+                              {trainee.department}
+                            </Badge>
+                          </div>
+                          <CardDescription className="text-lg group-hover:text-gray-700 transition-colors duration-300">
+                            {trainee.description}
+                          </CardDescription>
+                        </div>
+                        
+                        <div className="flex flex-col space-y-2 text-sm text-gray-600">
+                          <div className="flex items-center space-x-2">
+                            <MapPin className="h-4 w-4" />
+                            <span>{trainee.location}</span>
+                          </div>
+                          <div className="flex items-center space-x-2">
+                            <Clock className="h-4 w-4" />
+                            <span>{trainee.type}</span>
+                          </div>
+                          <div className="flex items-center space-x-2">
+                            <DollarSign className="h-4 w-4" />
+                            <span>{trainee.salary}</span>
+                          </div>
+                        </div>
+                      </div>
+                    </CardHeader>
+                    
+                    <CardContent className="relative z-10">
+                      <div className="space-y-4">
+                        <div>
+                          <h4 className="font-semibold text-gray-900 mb-2">Requirements:</h4>
+                          <ul className="space-y-1">
+                            {trainee.requirements.map((req, idx) => (
+                              <li key={idx} className="flex items-center space-x-2 text-gray-600">
+                                <div className="w-1.5 h-1.5 bg-primary rounded-full" />
+                                <span>{req}</span>
+                              </li>
+                            ))}
+                          </ul>
+                        </div>
+                        
+                        <Button asChild variant="outline" className="border-primary text-primary hover:bg-primary hover:text-white interactive-button">
+                          <Link href="/apply">
+                            Apply for Trainee Program
+                            <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform duration-300" />
+                          </Link>
                         </Button>
                       </div>
                     </CardContent>
@@ -224,7 +335,7 @@ export default function Careers() {
         </section>
 
         {/* CTA Section */}
-        <section className="py-16 bg-white">
+        <section className="py-16 bg-gradient-to-br from-gray-50 to-white">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center space-y-6">
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900">
@@ -235,7 +346,7 @@ export default function Careers() {
                 how you can contribute to our mission.
               </p>
               <Button asChild size="lg" className="button-gradient text-white shadow-xl interactive-button px-8 py-4 text-lg font-semibold">
-                <Link href="/book-consultation" className="flex items-center">
+                <Link href="/apply" className="flex items-center">
                   Send Your Resume
                   <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
                 </Link>
